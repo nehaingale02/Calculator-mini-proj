@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Simple Calculator</title>
+    <!-- Bootstrap CSS -->
+    <link href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css" rel="stylesheet">
+    <!-- Custom CSS -->
+    <style>
+        body {
+            background-color: #ccc;
+        }
+
+        .calculator {
+            width: 300px;
+            margin: 20px auto;
+            border: 1px solid #ccc;
+            padding: 20px;
+            border-radius: 30px;
+            background-color: #73d6cf;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.3);
+        }
+
+        .btn {
+            width: 50px;
+            height: 50px;
+            font-size: 20px;
+            margin: 2px;
+            border-radius: 50px;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.3);
+        }
+    </style>
+</head>
+
+<body>
+    <div class="container">
+        <div class="calculator mt-5">
+            <input type="text" id="display" class="form-control mb-2 bg-dark text-light" disabled>
+            <div class="row">
+                <button class="btn btn-info col" onclick="appendToDisplay('7')">7</button>
+                <button class="btn btn-info col" onclick="appendToDisplay('8')">8</button>
+                <button class="btn btn-info col" onclick="appendToDisplay('9')">9</button>
+                <button class="btn btn-warning col" onclick="operation('+')">+</button>
+            </div>
+            <div class="row">
+                <button class="btn btn-info col" onclick="appendToDisplay('4')">4</button>
+                <button class="btn btn-info col" onclick="appendToDisplay('5')">5</button>
+                <button class="btn btn-info col" onclick="appendToDisplay('6')">6</button>
+                <button class="btn btn-warning col" onclick="operation('-')">-</button>
+            </div>
+            <div class="row">
+                <button class="btn btn-info col" onclick="appendToDisplay('1')">1</button>
+                <button class="btn btn-info col" onclick="appendToDisplay('2')">2</button>
+                <button class="btn btn-info col" onclick="appendToDisplay('3')">3</button>
+                <button class="btn btn-warning col" onclick="operation('*')">*</button>
+            </div>
+            <div class="row">
+                <button class="btn btn-info col" onclick="appendToDisplay('0')">0</button>
+                <button class="btn btn-info col" onclick="appendToDisplay('.')">.</button>
+                <button class="btn btn-info col" onclick="operation('square')">x²</button>
+                <button class="btn btn-warning col" onclick="operation('/')">/</button>
+            </div>
+            <div class="row">
+                <button class="btn btn-success col-6" onclick="calculate()">=</button>
+                <button class="btn btn-danger col" onclick="clearDisplay()">AC</button>
+                <button class="btn btn-warning col" onclick="operation('%')">%</button>
+            </div>
+        </div>
+    </div>
+    <script src="calci.js"></script>
+</body>
+
+</html>
