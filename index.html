@@ -10,17 +10,17 @@
     <!-- Custom CSS -->
     <style>
         body {
-            background-color: #ccc;
+            background-color: #b0e9d7;
         }
 
         .calculator {
             width: 300px;
             margin: 20px auto;
-            border: 1px solid #ccc;
+            border: 1px solid #cccccc;
             padding: 20px;
             border-radius: 30px;
-            background-color: #73d6cf;
-            box-shadow: 0 0 10px rgba(0, 0, 0, 0.3);
+            background-color: #1a2827;
+            box-shadow: 0 0 10px rgba(65, 64, 64, 0.3);
         }
 
         .btn {
@@ -28,7 +28,7 @@
             height: 50px;
             font-size: 20px;
             margin: 2px;
-            border-radius: 50px;
+            border-radius: 30px;
             box-shadow: 0 0 10px rgba(0, 0, 0, 0.3);
         }
     </style>
@@ -37,7 +37,7 @@
 <body>
     <div class="container">
         <div class="calculator mt-5">
-            <input type="text" id="display" class="form-control mb-2 bg-dark text-light" disabled>
+            <input type="text" id="display" class="form-control mb-2" disabled>
             <div class="row">
                 <button class="btn btn-info col" onclick="appendToDisplay('7')">7</button>
                 <button class="btn btn-info col" onclick="appendToDisplay('8')">8</button>
@@ -63,8 +63,8 @@
                 <button class="btn btn-warning col" onclick="operation('/')">/</button>
             </div>
             <div class="row">
-                <button class="btn btn-success col-6" onclick="calculate()">=</button>
                 <button class="btn btn-danger col" onclick="clearDisplay()">AC</button>
+                <button class="btn btn-success col-6" onclick="calculate()">=</button>
                 <button class="btn btn-warning col" onclick="operation('%')">%</button>
             </div>
         </div>
